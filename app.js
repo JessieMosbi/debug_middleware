@@ -9,10 +9,12 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.set('view engine', 'handlebars')
 app.use(methodOverride('_method'))
 
-const { debug1 } = require('./lib.js')
+const { debug1, debug2 } = require('./lib.js')
 
 // Q1: 2019-5-17 18:51:12 | GET from /
 app.use(debug1)
+// Q2: 2019-5-17 18:51:12 | GET from / | total time: 8ms
+app.use(debug2)
 
 // 列出全部 Todo
 app.get('/', (req, res) => {
