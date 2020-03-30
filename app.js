@@ -2,6 +2,14 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const { debug1 } = require('./lib.js')
+
+app.use((req, res, next) => {
+  // Q1: 2019-5-17 18:51:12 | GET from /
+  debug1(req)
+  next()
+})
+
 // 列出全部 Todo
 app.get('/', (req, res) => {
   res.send('列出全部 Todo')
