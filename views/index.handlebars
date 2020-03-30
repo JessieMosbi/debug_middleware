@@ -1,0 +1,13 @@
+<div class="d-flex">
+  <a href="/"><button type="submit" class="btn btn-primary mx-1">列出全部 Todo</button></a>
+  <a href="/new"><button type="button" class="btn btn-secondary mx-1">新增 Todo 頁面</button></a>
+  <a href="/1"><button type="button" class="btn btn-success mx-1">顯示一筆 Todo</button></a>
+
+  <form action="/" method="POST">
+    <button type="submit" class="btn btn-danger mx-1">新增一筆 Todo</button>
+  </form>
+
+  <form action="/1/delete?_method=delete" method="POST">
+    <button type="submit" class="btn btn-warning mx-1">刪除 Todo</button>
+  </form>
+</div>
