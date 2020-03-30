@@ -11,11 +11,8 @@ app.use(methodOverride('_method'))
 
 const { debug1 } = require('./lib.js')
 
-app.use((req, res, next) => {
-  // Q1: 2019-5-17 18:51:12 | GET from /
-  debug1(req)
-  next()
-})
+// Q1: 2019-5-17 18:51:12 | GET from /
+app.use(debug1)
 
 // 列出全部 Todo
 app.get('/', (req, res) => {
